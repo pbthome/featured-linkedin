@@ -1,5 +1,6 @@
 import { useLang } from '../context/LangContext'
 import { founder } from '../data/resumeData'
+import { publicUrl } from '../utils/publicUrl'
 
 function t(val, lang) {
   if (!val) return ''
@@ -37,7 +38,7 @@ export default function FounderCard() {
               style={brand.name === 'Othori' ? { background: 'rgba(0,0,0,0.6)' } : undefined}
             >
               {brand.src && (
-                <img src={brand.src} alt={brand.name} />
+                <img src={publicUrl(brand.src)} alt={brand.name} />
               )}
             </div>
           ))}

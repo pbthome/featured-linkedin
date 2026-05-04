@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useLang } from '../context/LangContext'
 import { hero } from '../data/resumeData'
+import { publicUrl } from '../utils/publicUrl'
 
 function t(val, lang) {
   if (!val) return ''
@@ -77,7 +78,7 @@ export default function Hero() {
             <div className="photo-initials">PT</div>
           ) : (
             <img
-              src="/photo.jpg"
+              src={publicUrl('photo.jpg')}
               alt="Pedro Thomé"
               onError={() => setPhotoError(true)}
             />
@@ -100,7 +101,7 @@ export default function Hero() {
         </div>
         <a
           className="cv-download-btn"
-          href="/Pedro-Thome-Resume.pdf"
+          href={publicUrl('Pedro-Thome-Resume.pdf')}
           download="Pedro-Thome-Resume.pdf"
         >
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
