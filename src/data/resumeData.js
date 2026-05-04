@@ -4,8 +4,8 @@ export const hero = {
     pt: 'Gerente Sênior de Produto · IA · B2B SaaS · Ops · Crescimento',
   },
   tagline: {
-    en: '14 years. 5 countries. Always ships.',
-    pt: '14 anos. 5 países. Sempre entrega.',
+    en: '14 years. 4 countries. Always ships.',
+    pt: '14 anos. 4 países. Sempre entrega.',
   },
   pills: [
     { en: 'AI Product Manager', pt: 'PM de IA', accent: true },
@@ -40,7 +40,7 @@ export const hero = {
   ],
   stats: [
     { n: '14', l: { en: 'Years experience', pt: 'Anos de exp.' } },
-    { n: '5', l: { en: 'Countries worked', pt: 'Países trabalhados' } },
+    { n: '4', l: { en: 'Countries worked', pt: 'Países trabalhados' } },
     { n: '8', l: { en: 'Companies', pt: 'Empresas' } },
   ],
 }

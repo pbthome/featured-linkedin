@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300;1,400&family=Outfit:wght@300;400;500&display=swap');
+
+  body {
+    width: 1200px;
+    height: 628px;
+    overflow: hidden;
+    background: #141210;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 64px 96px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* subtle warm glow top-left */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: -80px;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(196,103,58,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #c4673a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px; height: 1px;
+    background: #c4673a;
+  }
+
+  .name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 0.92;
+    color: #f5f3ef;
+  }
+  .name em {
+    font-style: italic;
+    color: #c4673a;
+  }
+
+  .tagline {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 22px;
+    color: #908c86;
+    margin-top: 4px;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .pill {
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #908c86;
+  }
+  .pill.accent {
+    background: rgba(196,103,58,0.15);
+    border-color: rgba(196,103,58,0.4);
+    color: #e8896a;
+  }
+
+  .right {
+    flex-shrink: 0;
+    margin-left: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 8px 40px rgba(0,0,0,0.4);
+  }
+  .photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .url {
+    font-size: 13px;
+    color: #5a5650;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <p class="eyebrow">Senior Product Manager</p>
+    <h1 class="name">Pedro<br><em>Thomé</em></h1>
+    <p class="tagline">14 years. 4 countries. Always ships.</p>
+    <div class="pills">
+      <span class="pill accent">AI Product Manager</span>
+      <span class="pill">0→1 Builder</span>
+      <span class="pill">B2B &amp; B2C SaaS</span>
+      <span class="pill">Founder</span>
+    </div>
+  </div>
+  <div class="right">
+    <div class="photo">
+      <img src="public/photo.jpg" alt="Pedro Thomé">
+    </div>
+    <span class="url">pbthome.github.io/featured-linkedin</span>
+  </div>
+</div>
+</body>
+</html>
